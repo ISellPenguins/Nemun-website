@@ -1,0 +1,63 @@
+/* 1. The Full Hero Banner Container */
+.hero-section {
+    background-color: #2b3a55; /* Replace with your leaf pattern image if you have one */
+    background-image: url("wallpaper.png"), linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)); /* Slight darkening overlay */
+    background-size: 50% auto, cover; /* Adjust the size of the leaf pattern and the main background */
+    background-position: center;
+    
+    height: 55vh; /* Sets a generous height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 2. The Semi-Transparent Center Box */
+.hero-card {
+    background-color: rgba(28, 41, 66, 0.85); /* Dark blue with 85% opacity */
+    padding: 40px 60px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Soft shadow underneath */
+}
+
+/* 3. Top Meta Text (Hsinchu | Date | NEHS) */
+.hero-meta {
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Creates that spacious, clean look */
+    margin-bottom: 15px;
+}
+
+/* 4. The Thin Divider Line */
+.hero-divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white line */
+    width: 85%;
+    margin: 0 auto 25px auto;
+}
+
+/* 5. The Large Conference Title */
+.hero-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #ffffff;
+    font-size: 4rem; /* Big and bold */
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* 6. The Bottom Tagline */
+.hero-tagline {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic; /* Matches the original quote style */
+    color: #e0e6ed;
+    font-size: 14px;
+    letter-spacing: 3px;
+}

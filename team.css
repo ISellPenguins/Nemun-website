@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+body{
+    background-image: linear-gradient(180deg, rgba(250, 245, 232, 0.55) 0%, rgba(214, 228, 240, 0.55) 100%),
+                      url("un-flags.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+
+/* ===== Dark decorative page header (no photo, just color + pattern) ===== */
+.team-hero {
+    position: relative;
+    background-color: #1c2942;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 90px 8% 70px 8%;
+    overflow: hidden;
+
+    /* Subtle repeating leaf/vine pattern, drawn as an inline SVG data URI.
+       Low opacity so it reads as texture, not a competing graphic. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' opacity='0.06'%3E%3Cpath d='M20 180 Q40 120 20 60 Q0 20 40 0'/%3E%3Ccircle cx='20' cy='60' r='6'/%3E%3Ccircle cx='30' cy='90' r='5'/%3E%3Ccircle cx='10' cy='120' r='5'/%3E%3Cpath d='M180 20 Q160 80 180 140 Q200 180 160 200'/%3E%3Ccircle cx='180' cy='140' r='6'/%3E%3Ccircle cx='170' cy='110' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+.team-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.team-eyebrow {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #cdd6e8;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.team-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* ===== Team member list ===== */
+.team-list {
+    background-color: #ffffff;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 8%;
+
+    margin-bottom: 150px;
+}
+
+.team-member {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.team-member:last-child {
+    margin-bottom: 0;
+}
+
+.team-photo {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e2e8f0; /* placeholder fill until a real photo is added */
+}
+
+.team-info {
+    flex: 1;
+}
+
+.team-info h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.8rem;
+    color: #1c2942;
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+    color: #5a6b8c;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.team-bio {
+    font-family: 'Montserrat', 'Georgia', 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #333;
+    text-align: justify;
+}
+
+/* Responsive: stack photo above text on narrow screens */
+@media (max-width: 700px) {
+    .team-title {
+        font-size: 2.2rem;
+    }
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+    .team-photo {
+        flex: 0 0 auto;
+        width: 160px;
+        height: 160px;
+    }
+    .team-bio {
+        text-align: left;
+    }
+}

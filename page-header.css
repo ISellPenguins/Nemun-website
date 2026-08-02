@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* ===== Page Header (photo banner + eyebrow + title) ===== */
+.page-header {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    overflow: hidden;
+
+    /* Placeholder background — swap the url() below for your own photo.
+       Until you have one, this gradient stands in for it. */
+    background-image:
+        linear-gradient(180deg, rgba(250, 245, 232, 0.55) 0%, rgba(214, 228, 240, 0.55) 100%),
+        url('un-flags.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed; /* photo stays put while the card scrolls up over it */
+}
+
+.page-eyebrow {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    color: #1c2942;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #1c2942;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 200;
+    font-size: 3.2rem;
+    color: #1c2942;
+    margin: 0;
+}
+
+/* ===== Overlapping content card ===== */
+.page-card {
+    background-color: rgba(255, 255, 255, 0.92);
+    max-width: 1100px;
+    margin: -60px auto 60px auto; /* negative margin pulls it up over the header */
+    padding: 60px 70px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.page-card h2 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.9rem;
+    color: #1c2942;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-card p {
+    font-family: 'Montserrat', 'Georgia', 'Times New Roman', serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        min-height: 45vh;
+        background-attachment: scroll; /* fixed backgrounds are unreliable on mobile Safari */
+    }
+    .page-title {
+        font-size: 2.2rem;
+    }
+    .page-card {
+        padding: 35px 25px;
+        margin: -40px 20px 40px 20px;
+    }
+    .page-card p {
+        text-align: left;
+    }
+}

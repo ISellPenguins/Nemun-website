@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/* General Footer Wrapper */
+.fat-footer {
+    background-color: #4a5a70; /* Slate blue like your reference */
+    color: #ffffff;
+    padding: 60px 0 0 0; /* Generous top padding, 0 bottom because of socket */
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Container holding the columns */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Individual Column Layout */
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Prevents columns from getting too squished */
+}
+
+/* Column Typography styling */
+.footer-col h3 {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* Link List Styling */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+    color: #93c5fd; /* Soft blue highlight on hover */
+}
+
+/* Social Media Row */
+.footer-socials a {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+/* 3. The Footer Socket (Bottom Bar) */
+.footer-socket {
+    margin-top: 0px;
+    background-color: #334155; /* Darker shade for contrast */
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
