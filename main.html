@@ -1,163 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>NEMUN 2027</title>
-    <link rel="stylesheet" href="global-layout.css">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="content-section.css">
-    <link rel="stylesheet" href="page-header.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEMUN 2027 | Model United Nations at NEHS</title>
+  <meta name="description" content="NEMUN 2027, the annual Model United Nations conference hosted by National Experimental High School at Hsinchu Science Park. Be a voice, not an echo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet" href="sections.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="motion.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="logo"><a href="#">NEMUN 2027</a></div>
-        
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+<body data-page="main.html">
 
-            <li class="dropdown">
-                <a href="#about">About</a>
-                <div class="dropdown-content">
-                    <a href="secretariats.html">Secretariats</a>
-                    <a href="team-subpage.html">Meet the team</a>
-                    <a href="#venue">Venue</a>
-                </div>
-            </li>
+  <div data-site-header></div>
 
-            <li><a href="registration.html">Registration</a></li>
+  <main>
 
-            <li class="dropdown">
-                <a href="#conference">Conference</a>
-                <div class="dropdown-content">
-                    <a href="theme-introduction.html">Theme introduction</a>
-                    <a href="#keynote-speaker">Keynote Speaker</a>
-                    <a href="#dates">Important Dates</a>
-                    <a href="#Transportation">Transportation</a>
-                    <a href="#accommodation">Accommodation</a>
-                </div>
-            </li>
-
-            <li><a href="#committee">Committee</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">JMUN</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero-section">
-        <div class="hero-card">
-            <p class="hero-meta">HSINCHU &nbsp;|&nbsp; 6-7, June 2027 &nbsp;|&nbsp; NEHS</p>   
-            <hr class="hero-divider">
-            <h1 class="hero-title">NEMUN 2027</h1>
-            <p class="hero-tagline">Be a voice, not an echo.</p>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-inner reveal">
+        <p class="hero-meta">
+          <span>Hsinchu</span>
+          <span class="meta-sep">|</span>
+          <span>June 2027</span>
+          <span class="meta-sep">|</span>
+          <span>NEHS</span>
+        </p>
+        <h1 class="hero-title">NEMUN 2027</h1>
+        <hr class="hero-rule">
+        <p class="hero-tagline">Be a voice, not an echo.</p>
+        <div class="btn-row btn-row--center">
+          <a class="btn btn--gold" href="registration.html">Register <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn--outline-light" href="theme-introduction.html">Read the theme</a>
         </div>
+      </div>
     </header>
 
-    <div class="contents-container">
-        <!-- 1. About Us -->
-        <div class="content-section" id="about">
-            <div class="content-section-header">
-                <h2>About us</h2>
+    <!-- About -->
+    <section class="section section--cream" id="about">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">About NEMUN</p>
+          <h2 class="section-title">A conference built by students, for students</h2>
+        </div>
+        <div class="prose reveal">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote band -->
+    <section class="section section--navy">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="reveal" style="text-align:center">
+          <p class="eyebrow">Our mission</p>
+          <p class="lead" style="font-family:var(--font-display);font-size:clamp(1.6rem,4vw,2.4rem);font-style:italic;color:var(--cream-50);margin-bottom:0">&ldquo;Where ideas spark, and every voice matters.&rdquo;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important dates -->
+    <section class="section section--paper" id="dates">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">Mark your calendar</p>
+          <h2 class="section-title">Important dates</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <time>October 2026</time>
+            <h4>Student officer recruitment</h4>
+            <p>Applications open for student officers. Details announced soon.</p>
+          </div>
+          <div class="timeline-item">
+            <time>November 2026</time>
+            <h4>Early bird registration</h4>
+            <p>Early registration window for delegates. Information to follow.</p>
+          </div>
+          <div class="timeline-item">
+            <time>February 2027</time>
+            <h4>Regular registration</h4>
+            <p>Standard registration opens for all schools.</p>
+          </div>
+          <div class="timeline-item">
+            <time>April 2027</time>
+            <h4>Payment deadline</h4>
+            <p>All fees due and background guides released.</p>
+          </div>
+          <div class="timeline-item">
+            <time>June 2027</time>
+            <h4>NEMUN 2027</h4>
+            <p>The conference. Two days of debate, diplomacy, and growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conference info -->
+    <section class="section section--cream" id="conference">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The conference</p>
+          <h2 class="section-title">Conference information</h2>
+        </div>
+        <div class="split">
+          <div class="split-copy reveal">
+            <h3 style="font-size:var(--text-2xl)">Two days of debate and diplomacy</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="registration.html">Register now <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
             </div>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="split-media reveal">
+            <img src="un-flags-1920.jpg" alt="Flags of the United Nations">
+          </div>
         </div>
-    
-        <hr class="section-divider"> <!-- Separation Line -->
+      </div>
+    </section>
 
-        <!-- 2. Important Dates -->
-        <div class="content-section" id="dates">
-            <div class="content-section-header">
-                <h2>Important Dates</h2>
+    <!-- Theme -->
+    <section class="section section--paper" id="theme">
+      <div class="container">
+        <div class="split split--flip">
+          <div class="split-media reveal">
+            <img src="hero-texture.png" alt="NEMUN wallpaper texture">
+          </div>
+          <div class="split-copy reveal">
+            <p class="eyebrow">This year&rsquo;s theme</p>
+            <h2 class="section-title">Theme introduction</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="btn-row">
+              <a class="btn btn--outline" href="theme-introduction.html">Read the theme <span class="btn-arrow" aria-hidden="true">&rarr;</span></a>
             </div>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> 
+          </div>
         </div>
+      </div>
+    </section>
 
-        <hr class="section-divider"> <!-- Separation Line -->
-
-        <!-- 3. Conference Info -->
-        <div class="content-section" id="conference">
-            <div class="content-section-header">
-                <h2>Conference Information</h2>
-            </div>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- Keynote -->
+    <section class="section section--cream" id="keynote">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">Guest speaker</p>
+          <h2 class="section-title">Keynote speaker</h2>
         </div>
-
-        <hr class="section-divider"> <!-- Separation Line -->
-
-        <!-- 4. Committee Info -->
-        <div class="content-section" id="committee">
-            <div class="content-section-header">
-                <h2>Committee Information</h2>
-            </div>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="prose reveal">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Speaker details announced soon.</p>
         </div>
+      </div>
+    </section>
 
-        <hr class="section-divider"> <!-- Separation Line -->
-    </div>
-
-    <!-- Theme Introduction — photo header + overlapping card, styled after the 2026 subpage -->
-    <header class="page-header" id="theme">
-        <div>
-            <p class="page-eyebrow">NEMUN 2027</p>
-            <h1 class="page-title">Theme Introduction</h1>
+    <!-- Transportation -->
+    <section class="section section--paper" id="transportation">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">Getting here</p>
+          <h2 class="section-title">Transportation</h2>
         </div>
-    </header>
-    <div class="page-card">
-        <h2>Your Theme Title Goes Here</h2>
-        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Replace this paragraph with your 2027 theme statement.</p>
-        <p>Second paragraph — lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-
-    <footer class="fat-footer">
-        <!-- Main Content Grid -->
-        <div class="footer-container">
-            
-            <!-- Column 1: Links/Sitemap -->
-            <div class="footer-col">
-                <h3>Navigation</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Conference</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 2: Contact Details -->
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <p>Conference Email:<br>
-                   <a href="mailto:nemun@example.com">nemun@example.com</a></p>
-                <p>Secretary General:<br>
-                   Ricky Peng (example@nehs.hc.edu.tw)</p>
-            </div>
-            
-            <!-- Column 3: Extra Info -->
-            <div class="footer-col">
-                <h3>Conference Information</h3>
-                <p>lorem ispum </p>
-                
-                <div class="footer-socials">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                </div>
-            </div>
+        <div class="prose reveal">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Transit details announced soon.</p>
         </div>
+      </div>
+    </section>
 
-        <section class="location-section">
-
-        <div class="map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.9767193521147!2d121.01625853889817!3d24.7773917178719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836241355dfb1%3A0xfe2e46df2815ef22!2z5ZyL56uL5paw56u556eR5a245ZyS5Y2A5a-m6amX6auY57Sa5Lit562J5a245qCh!5e0!3m2!1szh-TW!2stw!4v1783504813358!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <!-- Accommodation -->
+    <section class="section section--cream" id="accommodation">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">Staying over</p>
+          <h2 class="section-title">Accommodation</h2>
         </div>
-        </section>
-
-        <!-- The Footer Socket / Sub-footer -->
-        <div class="footer-socket">
-            <p>National Experimental High School At Hsinchu Science Park © 2027 | No. 300, Jieshou Rd, East Dist., Hsinchu City 300094, Taiwan</p>
+        <div class="prose reveal">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lodging details announced soon.</p>
         </div>
-    </footer>
+      </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="section section--paper" id="venue">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The venue</p>
+          <h2 class="section-title">National Experimental High School at Hsinchu Science Park</h2>
+        </div>
+        <div class="split">
+          <div class="split-copy reveal">
+            <p>300, Jieshou Rd, East Dist., Hsinchu City, Taiwan</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="split-media reveal">
+            <img src="un-flags-1920.jpg" alt="United Nations flags">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee -->
+    <section class="section section--navy" id="committee">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Committees</p>
+          <h2 class="section-title">Where the debate happens</h2>
+        </div>
+        <div class="card-grid reveal-group">
+          <article class="card">
+            <span class="card-code">GA3</span>
+            <h3>General Assembly Third Committee</h3>
+            <p>Social, humanitarian and cultural affairs. Details announced soon.</p>
+          </article>
+          <article class="card">
+            <span class="card-code">UNDP</span>
+            <h3>UN Development Programme</h3>
+            <p>Sustainable development and human dignity. Details announced soon.</p>
+          </article>
+          <article class="card">
+            <span class="card-code">UNSC</span>
+            <h3>UN Security Council</h3>
+            <p>International peace and security. Details announced soon.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JMUN -->
+    <section class="section section--cream" id="jmun">
+      <div class="container-narrow" style="padding-inline:var(--gutter)">
+        <div class="section-head reveal">
+          <p class="eyebrow">For our youngest delegates</p>
+          <h2 class="section-title">Junior Model UN</h2>
+        </div>
+        <div class="prose reveal">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Details announced soon.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="site.js"></script>
 </body>
 </html>

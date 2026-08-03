@@ -1,82 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-/* General Footer Wrapper */
-.fat-footer {
-    background-color: #4a5a70; /* Slate blue like your reference */
-    color: #ffffff;
-    padding: 60px 0 0 0; /* Generous top padding, 0 bottom because of socket */
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+/* ============================================================
+   Site footer (injected by site.js)
+   ============================================================ */
+
+.site-footer {
+  background: var(--navy-900);
+  color: var(--ink-300);
 }
 
-/* Container holding the columns */
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
-    justify-content: space-between;
-    gap: 40px;
+.footer-top {
+  padding: var(--space-12) 0 var(--space-8);
 }
 
-/* Individual Column Layout */
-.footer-col {
-    flex: 1;
-    min-width: 250px; /* Prevents columns from getting too squished */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-8);
 }
 
-/* Column Typography styling */
-.footer-col h3 {
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #e2e8f0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--cream-50);
+  display: block;
+  margin-bottom: var(--space-4);
 }
 
-.footer-col p {
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #cbd5e1;
+.footer-brand:hover {
+  color: var(--cream-50);
 }
 
-/* Link List Styling */
-.footer-col ul {
-    list-style: none;
-    padding: 0;
+.footer-blurb {
+  max-width: 320px;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--ink-300);
+  margin-bottom: var(--space-5);
 }
 
-.footer-col ul li {
-    margin-bottom: 10px;
+.footer-heading {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-5);
 }
 
-.footer-col a {
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
 }
 
-.footer-col a:hover {
-    color: #93c5fd; /* Soft blue highlight on hover */
+.footer-links a {
+  color: var(--ink-300);
+  font-size: var(--text-sm);
 }
 
-/* Social Media Row */
+.footer-links a:hover {
+  color: var(--cream-50);
+}
+
+.footer-contact {
+  display: grid;
+  gap: 0.75rem;
+  font-size: var(--text-sm);
+  color: var(--ink-300);
+  margin: 0;
+}
+
+.footer-contact a {
+  color: var(--ink-300);
+}
+
+.footer-contact a:hover {
+  color: var(--cream-50);
+}
+
+.footer-contact .contact-line {
+  display: flex;
+  gap: 0.6em;
+  align-items: baseline;
+}
+
+.footer-socials {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
 .footer-socials a {
-    margin-right: 15px;
-    font-size: 18px;
+  color: var(--ink-300);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
 }
 
-/* 3. The Footer Socket (Bottom Bar) */
+.footer-socials a:hover {
+  color: var(--cream-50);
+}
+
+.footer-map {
+  margin-top: var(--space-8);
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: var(--radius-md);
+  display: block;
+  filter: grayscale(0.6) contrast(1.05);
+}
+
 .footer-socket {
-    margin-top: 0px;
-    background-color: #334155; /* Darker shade for contrast */
-    padding: 20px;
-    text-align: center;
-    font-size: 13px;
-    color: #94a3b8;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-5) 0;
+  border-top: 1px solid rgba(251, 250, 248, 0.08);
+  text-align: center;
+}
+
+.footer-socket p {
+  margin: 0;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+@media (max-width: 860px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
 }

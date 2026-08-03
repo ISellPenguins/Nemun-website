@@ -1,0 +1,50 @@
+/* ============================================================
+   Motion: restrained scroll reveals + hover micro-interactions
+   Elements start hidden, JS adds .is-visible when in view.
+   Honours prefers-reduced-motion.
+   ============================================================ */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity var(--dur-4) var(--ease-out),
+      transform var(--dur-4) var(--ease-out);
+    will-change: opacity, transform;
+  }
+
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Staggered children */
+  .js .reveal-group > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity var(--dur-4) var(--ease-out),
+      transform var(--dur-4) var(--ease-out);
+  }
+
+  .js .reveal-group.is-visible > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .reveal-group > *:nth-child(2) { transition-delay: 90ms; }
+  .reveal-group > *:nth-child(3) { transition-delay: 180ms; }
+  .reveal-group > *:nth-child(4) { transition-delay: 270ms; }
+  .reveal-group > *:nth-child(5) { transition-delay: 360ms; }
+  .reveal-group > *:nth-child(6) { transition-delay: 450ms; }
+
+  /* Icon / arrow nudge on CTA hover */
+  .btn .btn-arrow {
+    transition: transform var(--dur-2) var(--ease-out);
+  }
+
+  .btn:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+}
