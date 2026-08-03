@@ -28,16 +28,22 @@ The prototype succeeds when the president says:
 1. "The whole thing feels cohesive, like one designed system — not five pages that happen to share a nav bar."
 2. "I actually felt the conference when I scrolled it — the mood, the weight."
 
-## Current Code State (known issues)
+## Current Code State (post-rebuild, 2026-08-03)
 
-- **No design system:** 9 CSS files (`menu.css`, `hero.css`, `footer.css`, `content-section.css`, `team.css`, `registration.css`, `secretariets.css`, `page-header.css`, `global-layout.css`). Navy `#1c2942` hardcoded ~20 times; no CSS variables; Google Fonts `@import` duplicated across 5 files; type stack mixes Georgia, Times New Roman, Poppins, Montserrat.
-- **Broken links/404s:** `theme-introduction.html` and `team.html` are referenced but don't exist; nav "Meet the team" → `team.html` (missing), nav "Theme introduction" → `theme-introduction.html` (missing). Team photos reference `images/team-placeholder.jpg` but no `images/` folder exists.
-- **Dead/orphaned file:** `secretariets.css` (typo filename) is unused; `secretariats.html` links `team.css` instead.
-- **Duplication:** nav bar and footer copy-pasted into all 4 pages (`main.html`, `registration.html`, `secretariats.html`, `team-subpage.html`).
-- **Wrong title:** `registration.html` `<title>` says "Secretariats".
-- **Placeholder content:** lorem ipsum, "bruhbruhbruh", fake email `nemun@example.com`, dead `href="#"` links — acceptable at prototype stage.
-- **No mobile nav:** menu never collapses; `@media` rules only in `team.css` / `page-header.css`.
-- **Paid-font gap:** 2026 used paid fonts (Ogg, Inknut Antiqua) not on Google Fonts. Use free alternatives (e.g. Cormorant Garamond / Libre Baskerville / Playfair for display, a clean sans for body) to capture the feeling rather than exact match — this was accepted.
+The prototype was rebuilt on a unified design system (commit `3a04199`). Current structure:
+
+- `tokens.css` — design tokens: navy/cream palette (2026 colors preserved), Cormorant Garamond (display) + Jost (body), spacing/radius/shadow/motion scales. All colors/fonts live here; nothing hardcoded.
+- `base.css` — reset, typography, utilities, reduced-motion handling.
+- `nav.css` + `footer.css` + `site.js` — shared header/footer **injected by JS** on every page (`data-site-header` / `data-site-footer` mount points). Nav and footer are edited in ONE place (`site.js`). `body[data-page]` drives the active-nav state. No more copy-paste duplication.
+- `hero.css`, `sections.css` — page header, hero, content sections, split layouts, timeline, committee cards, team grid, buttons.
+- `motion.css` — restrained scroll reveals (`.reveal` / `.reveal-group`, gated behind `.js` class so no-JS users still see content) + hover micro-interactions, honours `prefers-reduced-motion`.
+- Pages (all valid HTML, all render 200, nav/footer inject correctly): `main.html` (home, 12 sections incl. all nav anchors `#about #dates #conference #theme #keynote #transportation #accommodation #venue #committee #jmun`), `secretariats.html`, `team.html`, `theme-introduction.html`, `registration.html`.
+- Assets: `hero-texture.png` (optimized from 29MB wallpaper.png), `un-flags-1920.jpg`. Original 29MB `wallpaper.png` removed.
+- Dead files removed: `menu.css`, `content-section.css`, `global-layout.css`, `page-header.css`, `team.css`, `registration.css`, `secretariets.css`, `team-subpage.html`.
+
+Remaining placeholder content (intentional at prototype stage): lorem ipsum text, team bios, committee details, dates, speaker, venue, and contact info in `site.js` footer use a placeholder email `nemun@nehs.hc.edu.tw`.
+
+Known smaller items still to do (next pass): real photos for team avatars (currently initials), real conference content when the team decides it, verify Google Fonts render, favicon, and the `HANDOFF.md` copy itself is draft-level prose.
 
 ## Priority Order (agreed in session)
 
