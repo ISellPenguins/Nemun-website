@@ -15,31 +15,31 @@
   /* ---------- Shared header ---------- */
 
   var NAV_ITEMS = [
-    { label: "Home", href: "main.html" },
+    { label: "Home", href: "index.html" },
     {
       label: "About",
-      href: "main.html#about",
+      href: "index.html#about",
       children: [
         { label: "Secretariats", href: "secretariats.html" },
         { label: "Meet the team", href: "team.html" },
-        { label: "Venue", href: "main.html#venue" }
+        { label: "Venue", href: "index.html#venue" }
       ]
     },
     { label: "Registration", href: "registration.html" },
     {
       label: "Conference",
-      href: "main.html#conference",
+      href: "index.html#conference",
       children: [
         { label: "Theme introduction", href: "theme-introduction.html" },
-        { label: "Keynote Speaker", href: "main.html#keynote" },
-        { label: "Important Dates", href: "main.html#dates" },
-        { label: "Transportation", href: "main.html#transportation" },
-        { label: "Accommodation", href: "main.html#accommodation" }
+        { label: "Keynote Speaker", href: "index.html#keynote" },
+        { label: "Important Dates", href: "index.html#dates" },
+        { label: "Transportation", href: "index.html#transportation" },
+        { label: "Accommodation", href: "index.html#accommodation" }
       ]
     },
-    { label: "Committee", href: "main.html#committee" },
-    { label: "Contact Us", href: "main.html#contact" },
-    { label: "JMUN", href: "main.html#jmun" }
+    { label: "Committee", href: "index.html#committee" },
+    { label: "Contact Us", href: "index.html#contact" },
+    { label: "JMUN", href: "index.html#jmun" }
   ];
 
   var current = (document.body && document.body.dataset.page) || "";
@@ -52,7 +52,7 @@
   function renderNav() {
     var html = '<header class="site-header">';
     html += '<nav class="nav container" aria-label="Primary">';
-    html += '<a class="brand" href="main.html">NEMUN 2027</a>';
+    html += '<a class="brand" href="index.html">NEMUN 2027</a>';
 
     html += '<button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">';
     html += "<span></span><span></span><span></span>";
@@ -93,7 +93,7 @@
       '<div class="footer-grid">' +
 
       '<div>' +
-      '<a class="footer-brand" href="main.html">NEMUN 2027</a>' +
+      '<a class="footer-brand" href="index.html">NEMUN 2027</a>' +
       '<p class="footer-blurb">National Experimental High School at Hsinchu Science Park, Taiwan. An annual Model United Nations conference. Be a voice, not an echo.</p>' +
       '<div class="footer-socials">' +
       '<a href="#" aria-label="Instagram">Instagram</a>' +
@@ -104,7 +104,7 @@
       '<div>' +
       '<h4 class="footer-heading">Explore</h4>' +
       '<ul class="footer-links">' +
-      '<li><a href="main.html">Home</a></li>' +
+      '<li><a href="index.html">Home</a></li>' +
       '<li><a href="registration.html">Registration</a></li>' +
       '<li><a href="theme-introduction.html">Theme</a></li>' +
       '<li><a href="team.html">Meet the team</a></li>' +
