@@ -50,7 +50,8 @@
   }
 
   function renderNav() {
-    var html = '<nav class="nav container" aria-label="Primary">';
+    var html = '<header class="site-header">';
+    html += '<nav class="nav container" aria-label="Primary">';
     html += '<a class="brand" href="main.html">NEMUN 2027</a>';
 
     html += '<button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">';
@@ -77,7 +78,9 @@
       }
     });
 
-    html += "</ul></nav>";
+    html += "</ul>";
+    html += "</nav>";
+    html += "</header>";
     return html;
   }
 
