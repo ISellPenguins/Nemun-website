@@ -41,7 +41,7 @@ The prototype was rebuilt on a unified design system (commit `3a04199`). Current
 - Assets: `hero-texture.png` (optimized from 29MB wallpaper.png), `un-flags-1920.jpg`. Original 29MB `wallpaper.png` removed.
 - Dead files removed: `menu.css`, `content-section.css`, `global-layout.css`, `page-header.css`, `team.css`, `registration.css`, `secretariets.css`, `team-subpage.html`.
 
-Remaining placeholder content (intentional at prototype stage): lorem ipsum text, team bios, committee details, dates, speaker, venue, and contact info in `site.js` footer use a placeholder email `nemun@nehs.hc.edu.tw`.
+Remaining placeholder content (intentional at prototype stage): lorem ipsum text, team bios, committee details, dates, speaker, and venue. Contact email in `site.js` footer and `registration.html` is `nemun2027@gmail.com`.
 
 Known smaller items still to do (next pass): real photos for team avatars (currently initials), real conference content when the team decides it, verify Google Fonts render, favicon, and the `HANDOFF.md` copy itself is draft-level prose.
 

@@ -115,7 +115,7 @@
       '<div>' +
       '<h4 class="footer-heading">Contact</h4>' +
       '<div class="footer-contact">' +
-      '<a href="mailto:nemun@nehs.hc.edu.tw">nemun@nehs.hc.edu.tw</a>' +
+      '<a href="mailto:nemun2027@gmail.com">nemun2027@gmail.com</a>' +
       '<span>National Experimental High School, 300 Jieshou Rd, Hsinchu City, Taiwan</span>' +
       "</div>" +
       "</div>" +
