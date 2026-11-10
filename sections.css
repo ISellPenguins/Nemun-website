@@ -155,6 +155,22 @@
   gap: var(--space-6);
 }
 
+.card-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .card-grid--four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .card-grid--four {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   position: relative;
   background: var(--cream-50);
